@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To do</title>
-  <link rel="stylesheet" href="../ToDoApp/style.css">
-<script defer src="../ToDoApp/script.js"></script>
+ <link rel="stylesheet" href="./style.css">
+<script defer src="./script.js"></script>
 </head>
 
 <body>
-  <header> My to do`s</header>
+  <header> My to do</header>
 
   <main>
     <h3>New todo</h3>
-    <form id="To do list"> <label for="New to do"></label>
-    <input type="text" id="ToDoList"> 
+    <form id="newToDo"> <label for="New to do"></label>
+    <input type="text" id="toDoList"> 
     <button id="addButton">Add</button>
 
 
@@ -23,11 +23,16 @@
   <p id="Error"> 
   </p>
   <ul id="list"> 
-    <li id="listItem"> <button id="xBtn" type="Button">x</button></li> 
+    <li class="listItem"> 
+        <input type="checkbox" class="klar">Buy Milk <button class="xBtn">x</button></li>
+    <li class="listItem"> 
+        <input type="checkbox" class="klar">Learn JavaScript <button class="xBtn">x</button></li>
+    <li class="listItem"> 
+        <input type="checkbox" class="klar">Call Anna <button class="xBtn" type="Button">x</button></li> 
   </ul>
 
 
-  <footer id=""><p></p></footer>
+  <footer id="footer"><p>0 items left</p></footer>
 
 </body>
 </html>

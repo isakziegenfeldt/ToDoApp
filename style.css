@@ -15,7 +15,7 @@ body{
     color: white;
     border-radius: 5px;
 }
-#ToDoList{
+#toDoList{
     border-radius: 5px;
     min-width: 15rem;
 }
@@ -24,7 +24,7 @@ body{
     list-style: none;
 }
 
-#listItem {
+.listItem {
     border: black solid 1px;
     display: flex;
     align-items: center;
@@ -32,7 +32,14 @@ body{
     min-height: 2rem;
     padding-left: 1rem;
 }
-#xBtn{
+.xBtn{
     display: flex;
     margin-left: auto;
+}
+
+@media (min-width: 900px){
+    body{
+        display: flex;
+        flex-direction: row;
+    }
 }
