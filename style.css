@@ -1,0 +1,38 @@
+header {
+    font-size: 2.5rem;
+    font-style: oblique;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addButton {
+    background-color: rgb(58, 58, 58);
+    color: white;
+    border-radius: 5px;
+}
+#ToDoList{
+    border-radius: 5px;
+    min-width: 15rem;
+}
+
+#list{
+    list-style: none;
+}
+
+#listItem {
+    border: black solid 1px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    min-height: 2rem;
+    padding-left: 1rem;
+}
+#xBtn{
+    display: flex;
+    margin-left: auto;
+}
