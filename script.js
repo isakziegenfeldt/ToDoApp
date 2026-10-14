@@ -18,11 +18,36 @@ form.addEventListener("submit", function(event){
     if(addList === ""){
         error.textContent = "Please enter a task"
         return;
+
     }
+
+
 
     listDo.push(addList)
 
-    document.createElement("li");
+   const li = document.createElement("li"); 
+   li.textContent = addList 
+   list.appendChild (li) 
+   li.classList.add ("listItem")
+
+const checkbox = document.createElement ("input")
+checkbox.type = "checkbox"
+checkbox.classList.add ("klar")
+
+const xBtn = document.createElement ("Button") 
+xBtn.textContent = "x"
+xBtn.classList.add ("xBtn") 
+li.prepend (checkbox) 
+li.appendChild (xBtn)
+
+xBtn.addEventListener("click", function () {
+    li.remove();                              
+
+    const index = listDo.indexOf(addList);
+    listDo.splice(index, 1);                  
+
+    console.log(listDo);
+});
 
 
     console.log(listDo)

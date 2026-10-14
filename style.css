@@ -40,6 +40,6 @@ body{
 @media (min-width: 900px){
     body{
         display: flex;
-        flex-direction: row;
+        flex-: row;
     }
 }
