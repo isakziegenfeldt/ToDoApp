@@ -10,6 +10,20 @@ const form = document.querySelector("#newToDo")
 
 let listDo = [];
 
+
+function updateCounter(){
+        const checkboxes = list.querySelectorAll(".klar")
+        let itemsLeft = 0;
+
+        for (let i = 0; i < checkboxes.length; i++){
+            if(!checkboxes[i].checked){ 
+                itemsLeft++;
+            }
+             
+        }
+         footer.querySelector("p").textContent = itemsLeft + " items left";
+    }
+
 form.addEventListener("submit", function(event){
     event.preventDefault();
 
@@ -20,6 +34,7 @@ form.addEventListener("submit", function(event){
         return;
 
     }
+    error.textContent = "";
 
 
 
@@ -34,11 +49,16 @@ const checkbox = document.createElement ("input")
 checkbox.type = "checkbox"
 checkbox.classList.add ("klar")
 
+checkbox.addEventListener("click", function () {
+    updateCounter();
+});
+
 const xBtn = document.createElement ("Button") 
 xBtn.textContent = "x"
 xBtn.classList.add ("xBtn") 
 li.prepend (checkbox) 
 li.appendChild (xBtn)
+updateCounter();
 
 xBtn.addEventListener("click", function () {
     li.remove();                              
@@ -47,9 +67,12 @@ xBtn.addEventListener("click", function () {
     listDo.splice(index, 1);                  
 
     console.log(listDo);
+    updateCounter();
 });
 
 
     console.log(listDo)
+
+    
 
 })
